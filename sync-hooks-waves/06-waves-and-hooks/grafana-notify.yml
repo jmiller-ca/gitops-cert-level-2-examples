@@ -4,7 +4,10 @@ metadata:
   namespace: example06
   generateName: grafana-notify-
   labels:
-    codefresh.io/cert: grafana-job  
+    codefresh.io/cert: grafana-job
+  annoations:
+    argocd.argoproj.io/hook: Sync
+    argocd.arogproj.io/sync-wave: "-10"
 spec:
   template:
     spec:
